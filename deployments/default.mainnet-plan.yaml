@@ -1,0 +1,18 @@
+---
+id: 0
+name: Mainnet deployment
+network: mainnet
+stacks-node: "https://api.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoin.blockstack.com:8332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: notepad
+            expected-sender: SP20YJ8M91WMEK83JXMKR7B85Y2N4YNNF2TBNXXJS
+            cost: 89990
+            path: contracts/notepad.clar
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.0"
